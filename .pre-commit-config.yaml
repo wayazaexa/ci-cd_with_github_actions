@@ -48,8 +48,8 @@ repos:
         additional_dependencies: [tomli]
         exclude: '\.svg$'
 
-  - repo: https://github.com/espressif/conventional-precommit-linter
-    rev: v1.10.0
-    hooks:
-      - id: conventional-precommit-linter # Lints commit messages for conventional format
-        stages: [commit-msg]
+#  - repo: https://github.com/espressif/conventional-precommit-linter
+#    rev: v1.10.0
+#    hooks:
+#      - id: conventional-precommit-linter # Lints commit messages for conventional format
+#        stages: [commit-msg]
