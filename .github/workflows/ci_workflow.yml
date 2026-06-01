@@ -15,6 +15,10 @@ jobs:
     name: Test Project (Wokwi Simulation)
     uses: ./.github/workflows/test_in_wokwi.yml
     needs: build_project
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
     secrets:
       WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
   # Disable this job if you don't use it for hardware testing
