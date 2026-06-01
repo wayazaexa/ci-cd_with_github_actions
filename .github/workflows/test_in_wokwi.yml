@@ -55,8 +55,12 @@ jobs:
   publish-results:
     name: Publish Test App results
     needs: run-target
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: always()  # (run even if the previous steps have failed)
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
     steps:
       - name: Download Test results
         uses: actions/download-artifact@v4
