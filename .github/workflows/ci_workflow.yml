@@ -21,6 +21,10 @@ jobs:
       pull-requests: write
     secrets:
       WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
+  build_firmware_artifact:
+    name: Build ESP32-C6 Firmware Artifact
+    uses: ./.github/workflows/build_firmware_artifact.yml
+    needs: test_in_wokwi
   # Disable this job if you don't use it for hardware testing
   test_project_hw:
     if: ${{ github.repository_owner == 'espressif' }}  # Disable this job as default except if the repo is owned by Espressif
