@@ -12,7 +12,7 @@ The purpose of this project is to provide a good **starting point for customers 
 
 ## How to setup (Wokwi simulation)
 
-Go to the [Wokwi CI Dashboard](https://wokwi.com/ci/dashboard) and create a new CI token. Then add the token to your GitHub repository secrets as `WOKWI_CLI_TOKEN` (under "Settings" -> "Secrets and Variables" -> "Actions" -> "Repository secrets").
+Go to the [Wokwi CI Dashboard](https://wokwi.com/dashboard/ci) and create a new CI token. Then add the token to your GitHub repository secrets as `WOKWI_CLI_TOKEN` (under "Settings" -> "Secrets and Variables" -> "Actions" -> "Repository secrets").
 
 You can also run the tests locally. For more information, please refer to the [Wokwi CI documentation](https://docs.wokwi.com/wokwi-ci/getting-started).
 
