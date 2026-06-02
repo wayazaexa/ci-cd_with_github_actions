@@ -1,6 +1,7 @@
 /* Example application which uses testable component */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "esp_random.h"
 #include "testable.h"
 
