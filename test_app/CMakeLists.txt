@@ -6,5 +6,8 @@ cmake_minimum_required(VERSION 3.16)
 # If the components have unit tests (in its test subdirectory) it will be run too.
 set(EXTRA_COMPONENT_DIRS ../components)
 
+# Include unit tests from this component's test subdirectory.
+set(TEST_COMPONENTS "testable" CACHE STRING "List of components to test")
+
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(example_test_app)
