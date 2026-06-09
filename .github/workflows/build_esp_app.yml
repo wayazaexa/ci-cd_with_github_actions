@@ -21,7 +21,7 @@ jobs:
       - name: Build Test Application with ESP-IDF
         uses: espressif/esp-idf-ci-action@v1
         with:
-          esp_idf_version: "latest" # latest is the default version - could be a good idea to lock down to what you actually use
+          esp_idf_version: v6.0 # "latest" # latest is the default version - could be a good idea to lock down to what you actually use
           target: ${{ matrix.espidf_target }}
           path: 'test_app'
       - name: Upload files to artifacts for run-target job
