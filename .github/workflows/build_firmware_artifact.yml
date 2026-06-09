@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: Build firmware with ESP-IDF
@@ -20,7 +20,7 @@ jobs:
           target: esp32c6
           path: .
       - name: Upload firmware binary
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: firmware-esp32c6-${{ github.sha }}
           path: build/example_project.bin

@@ -20,9 +20,9 @@ jobs:
           - esp32s3
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Download files / artifacts from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: test_app_bin_${{ matrix.espidf_target }}
           path: test_app/build
@@ -40,7 +40,7 @@ jobs:
             --embedded-services esp,idf \
             --target=${{ matrix.espidf_target }}
       - name: Upload test results for publish-results job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: test_app_results_hw${{ matrix.espidf_target }}
@@ -52,7 +52,7 @@ jobs:
     if: always()  # (run even if the previous steps have failed)
     steps:
       - name: Download Test results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           path: test_results
       - name: Publish Test Results
